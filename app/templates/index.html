@@ -1,15 +1,34 @@
 <html>
     <head>
-        <title>Rock Paper Scissors (by Angelo)</title>
+        <title>Rock Paper Scissors - Index</title>
     </head>
     <body>
         <header>
             <h1>Rock Paper Scissors</h1>
-            <h3>by Angelo</h3>
         </header>
 
         <main>
-
+            <h3>Play against the computer!</h3>
+            <br>
+            <form action="/play" method="post">
+                <label for='name'>Insert player name here</label>
+                <input type="text" name='name' id='name'>
+                <br>
+                <br>
+                <label for='choice'>Make your choice</label>
+                <input type="text" list='options' name='choice' id='choice' placeholder="Click here to choose!">
+                <datalist id='options'>
+                    <option value="Rock"></option>
+                    <option value="Paper"></option>
+                    <option value="Scissors"></option>
+                </datalist>
+                <br>
+                <br>
+                <br>
+                <input type="submit" value="PLAY!">
+            </form>
+            <br>
+            <h4>Review the rules <a href='/welcome'>HERE</a></h4>
         </main>
 
         <footer>
