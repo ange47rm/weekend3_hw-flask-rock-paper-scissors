@@ -23,5 +23,8 @@ def play():
     new_game = Game ()
     new_game.play (player)
     print (request.form)
-    return f"The winner is {new_game.winner}!"
+    return f"Player {player.name} has chosen {player.choice.upper()}, and Computer has chosen {new_game.player_2.choice.upper()} and the winner is {new_game.winner}!"
 
+
+
+# print ("Player", player_1.name, "has chosen", player_1.choice, "and computer has picked", new_game.player_2.choice, "and the winner is", new_game.winner)
