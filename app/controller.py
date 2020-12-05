@@ -23,7 +23,10 @@ def play():
     new_game = Game ()
     new_game.play (player)
     print (request.form)
-    return f"Player {player.name} has chosen {player.choice.upper()}, and Computer has chosen {new_game.player_2.choice.upper()} and the winner is {new_game.winner}!"
+    if player.choice == new_game.player_2.choice:
+        return f"Both {player.name} and Computer have chosen {player.choice.upper()} so it's a draw! Try again!"  
+    else:
+        return f"Player {player.name} has chosen {player.choice.upper()}, and Computer has chosen {new_game.player_2.choice.upper()} and the winner is {new_game.winner}!"
 
 
 
