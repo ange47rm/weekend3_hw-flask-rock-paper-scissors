@@ -5,15 +5,16 @@ from app.models.player import Player
 
 @app.route ('/')
 def landing():
-    return "Test"
+    return render_template ('welcome.html', page = 'WELCOME')              
 
-@app.route ('/welcome')
+
+@app.route ('/rules')
 def welcome():
-    return render_template ('welcome.html')
+    return render_template ('rules.html', page = "RULES")
 
 @app.route ('/game')
 def game():
-    return render_template ('index.html')
+    return render_template ('game.html', page = 'Play against the computer!')
 
 @app.route ('/game/play', methods=['POST'])
 def play():
@@ -24,10 +25,13 @@ def play():
     new_game.play (player)
     print (request.form)
     if player.choice == new_game.player_2.choice:
-        return f"Both {player.name} and Computer have chosen {player.choice.upper()} so it's a draw! Try again!"  
+        return render_template ('game-play.html', page = 'OUTCOME', outcome = f"Both {player.name} and Computer have chosen {player.choice.upper()} so it's a draw! Try again!")
     else:
-        return f"Player {player.name} has chosen {player.choice.upper()}, and Computer has chosen {new_game.player_2.choice.upper()} and the winner is {new_game.winner}!"
+        return render_template ('game-play.html', page = 'OUTCOME', outcome = f"Player {player.name} has chosen {player.choice.upper()}, and Computer has chosen {new_game.player_2.choice.upper()} and the winner is {new_game.winner}!")
 
 
 
-# print ("Player", player_1.name, "has chosen", player_1.choice, "and computer has picked", new_game.player_2.choice, "and the winner is", new_game.winner)
+    # if player.choice == new_game.player_2.choice:
+    #     return f"Both {player.name} and Computer have chosen {player.choice.upper()} so it's a draw! Try again!"  
+    # else:
+    #     return f"Player {player.name} has chosen {player.choice.upper()}, and Computer has chosen {new_game.player_2.choice.upper()} and the winner is {new_game.winner}!"

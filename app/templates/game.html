@@ -1,21 +1,21 @@
 <html>
     <head>
-        <title>Rock Paper Scissors - Index</title>
+        <title>Rock Paper Scissors</title>
     </head>
     <body>
         <header>
             <h1>Rock Paper Scissors</h1>
+            <h3>{{page}}</h3>
         </header>
 
         <main>
-            <h3>Play against the computer!</h3>
             <br>
             <form action="/game/play" method="post">
-                <label for='name'>Insert player name here</label>
+                <label for='name'>Player name</label>
                 <input type="text" name='name' id='name'>
                 <br>
                 <br>
-                <label for='choice'>Make your choice</label>
+                <label for='choice'>Player choice</label>
                 <input type="text" list='options' name='choice' id='choice' placeholder="Click here to choose!">
                 <datalist id='options'>
                     <option value="Rock"></option>
@@ -28,7 +28,10 @@
                 <input type="submit" value="PLAY!">
             </form>
             <br>
-            <h4>Review the rules <a href='/welcome'>HERE</a></h4>
+            <a href = '/rules'>REVIEW THE RULES</a>
+            <br>
+            <br>
+            <a href= '/'>BACK TO WELCOME PAGE</a>
         </main>
 
         <footer>
