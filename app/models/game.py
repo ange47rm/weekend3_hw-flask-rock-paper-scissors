@@ -7,8 +7,6 @@ else:
     from app.models.player import Player
 
 
-
-
 class Game ():
     def __init__ (self):
         self.name = "Rock Paper Scissors"
@@ -17,8 +15,6 @@ class Game ():
         self.player_2 = Player('Computer', random.choice(choices))
 
     def play (self, player_1):
-
-        
 
         if player_1.choice == 'rock' and self.player_2.choice == 'scissors':
             self.winner = player_1.name
