@@ -1,26 +1,15 @@
-<html>
-    <head>
-        <title>Rock Paper Scissors</title>
-    </head>
-    <body>
-        <header>
-            <h1>Rock Paper Scissors</h1>
-            <h3>{{page}}</h3>
-        </header>
-        <hr>
-        <main>
+{% extends "base.html" %}
+{% block content %}
 
-            <p>{{outcome}}</p>
-            <br>
-            <br>
-            <a href = '/game'>NEW GAME!</a>
-            <br>
-            <br>
-            <a href = '/rules'>REVIEW THE RULES</a>
-            <br>
-            <br>
-            <a href= '/'>BACK TO WELCOME PAGE</a>
+<p>{{outcome}}</p>
+<br>
+<br>
+<a href = '/game'>NEW GAME!</a>
+<br>
+<br>
+<a href = '/rules'>REVIEW THE RULES</a>
+<br>
+<br>
+<a href= '/'>BACK TO WELCOME PAGE</a>
 
-        </main>
-
-</html>
+{% endblock %}

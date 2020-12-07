@@ -14,7 +14,7 @@ def welcome():
 
 @app.route ('/game')
 def game():
-    return render_template ('game.html', page = 'Play against the computer!')
+    return render_template ('game.html', page = 'PLAY AGAINST THE COMPUTER!')
 
 @app.route ('/game/play', methods=['POST'])
 def play():

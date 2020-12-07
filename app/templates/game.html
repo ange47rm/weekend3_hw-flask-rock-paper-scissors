@@ -1,14 +1,5 @@
-<html>
-    <head>
-        <title>Rock Paper Scissors</title>
-    </head>
-    <body>
-        <header>
-            <h1>Rock Paper Scissors</h1>
-            <h3>{{page}}</h3>
-        </header>
-
-        <main>
+{% extends "base.html" %}
+{% block content %}
             <br>
             <form action="/game/play" method="post">
                 <label for='name'>Player name</label>
@@ -32,10 +23,5 @@
             <br>
             <br>
             <a href= '/'>BACK TO WELCOME PAGE</a>
-        </main>
 
-        <footer>
-
-        </footer>
-    </body>
-</html>
+{% endblock %}

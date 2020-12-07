@@ -1,6 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
     <head>
-        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}">
+        <title>Rock Paper Scissors - {{page}}</title>
     </head>
     <body>
         <header>
@@ -9,10 +12,8 @@
         </header>
         
         <hr>
-        <!-- {% block blabla %}
-        {% endblock %} -->
-
-
+        <main>
+        {% block content %}{% endblock %}
+        </main>
+    </body>
 </html>
-
-    
